@@ -1,7 +1,7 @@
-import { UserModel } from '../../models/users/user.mode';
-import { IUser } from '../../interfaces/users/user.interface';
-import { _isEmpty } from '../../utils/helpers';
-import { HttpException } from '../../utils/httpException';
+import { UserModel } from '@models/users/user.mode';
+import { IUser } from '@interfaces/users/user.interface';
+import { _isEmpty } from '@utils/helpers';
+import { HttpException } from '@utils/httpException';
 
 export class AuthService {
   public users = UserModel;

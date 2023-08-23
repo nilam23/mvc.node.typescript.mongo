@@ -1,10 +1,10 @@
 import express from 'express';
 import { ConnectOptions, set } from 'mongoose';
 import { connect } from 'mongoose';
-import { ErrorMiddleware } from './middlewares/error.middleware';
-import { NODE_ENV } from './configs/env.config';
-import { dbConfigs } from './configs/db.config';
-import { IRoute } from './interfaces/helpers/route.interface';
+import { ErrorMiddleware } from '@middlewares/error.middleware';
+import { NODE_ENV } from '@configs/env.config';
+import { dbConfigs } from '@configs/db.config';
+import { IRoute } from '@interfaces/helpers/route.interface';
 
 export class App {
   public app: express.Application;

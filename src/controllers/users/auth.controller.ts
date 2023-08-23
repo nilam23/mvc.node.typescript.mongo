@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
-import { AuthService } from '../../services/users/auth.service';
-import { IUser } from '../../interfaces/users/user.interface';
-import { HttpStatusCodes } from '../../utils/constants';
+import { AuthService } from '@services/users/auth.service';
+import { IUser } from '@interfaces/users/user.interface';
+import { HttpStatusCodes } from '@utils/constants';
 
 export class AuthController {
   public authService = new AuthService();
