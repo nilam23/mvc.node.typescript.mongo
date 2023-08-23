@@ -4,10 +4,12 @@ import { IUser } from '@interfaces/users/user.interface';
 const UserSchema: Schema = new Schema({
   email: {
     type: String,
+    unique: true,
     required: true,
   },
   username: {
     type: String,
+    unique: true,
     required: true,
   },
   password: {

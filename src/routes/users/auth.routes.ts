@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import { IRoute } from '@interfaces/helpers/route.interface';
 import { AuthController } from '@controllers/users/auth.controller';
+import { validationMiddleware } from '@middlewares/validation.middleware';
+import { UserSignUpDto } from '@dtos/users/auth.dto';
 
 export class AuthRoutes implements IRoute {
   public path = '/';
@@ -12,6 +14,6 @@ export class AuthRoutes implements IRoute {
   }
 
   private initializeRoutes() {
-    this.router.post(`${this.path}signup`, this.authController.signup);
+    this.router.post(`${this.path}signup`, validationMiddleware(UserSignUpDto), this.authController.signup);
   }
 }
