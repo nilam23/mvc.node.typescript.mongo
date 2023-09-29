@@ -1,4 +1,4 @@
-import { UserModel } from '@models/users/user.mode';
+import { UserModel } from '@models/users/user.model';
 import { IUser } from '@interfaces/users/user.interface';
 import { _isEmpty } from '@utils/helpers';
 import { HttpException } from '@utils/httpException';
